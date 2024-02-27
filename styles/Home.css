@@ -8,6 +8,11 @@ body {
     justify-content: center;
 }
 
+a{
+    text-decoration: none;
+    color: #BBB;
+}
+
 .container{
     /* border: 2px solid red; */
     flex: 1;
