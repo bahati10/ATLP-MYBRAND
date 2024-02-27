@@ -130,118 +130,68 @@ textarea:focus, input:focus{
     /* border: 2px solid yellow; */
 }
 
-.title{
+.top-title{
     font-family: "Poppins";
     font-size: 20px;
     color: #FFF;
     font-weight: 400;
 }
 
-.subtitle{
+.top-subtitle{
     font-family: "Poppins";
     font-size: 12px;
     color: #BBB;
     font-weight: 300;
 }
 
-.or{
-    text-align: center;
-    font-family: "Poppins";
-    font-size: 12px;
-    color: #BBB;
-    font-weight: 300;
-    margin-bottom: 40px;
-}
-
-.signup-form{
+.add-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* border: 2px solid orange; */
 }
 
-.icon-holder{
-    width: 450px;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid #292929;
-    border-radius: 30px;
-    margin-bottom: 30px;
-}
-
-.names{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    margin-bottom: 30px;
-}
-
-.names input{
-    width: 200px;
-    height: 50px;
-    border: 1px solid #BBB;
-    border-radius: 8px;
-    background: transparent;
-    margin-bottom: 30px;
-}
-
-input{
-    color: #BBB;
-}
-
-.names label{
-    margin-bottom: 10px;
-    font-family: "Poppins";
-    font-size: 12px;
-    color: #BBB;
-    font-weight: 400;
-}
-
-
-.first-name-det, .last-name-det{
-    display: flex;
-    flex-direction: column;
-}
-
-
-.email-input, .message-input{
+.title-input{
     margin-bottom: 30px;
     margin-top: 10px;
-    width: 450px;
+    width: 99%;
     height: 50px;
     border: 1px solid #BBB;
     border-radius: 8px;
     background: transparent;
+    color: #BBB;
+
 }
 
-.email-label, .message-label{
+.subtitle-input{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 99%;
+    height: 50px;
+    border: 1px solid #BBB;
+    border-radius: 8px;
+    background: transparent;
+    color: #BBB;
+}
+
+.title-label, .subtitle-label{
     font-family: "Poppins";
     font-size: 12px;
     color: #BBB;
     font-weight: 400;
 }
 
-textarea{
-    height: 50px;
-    background: transparent;
-    border: 1px solid #BBB;
-    border-radius: 8px;
-}
-
-#message-text{
-    margin-top: 12px;
-    margin-bottom: 22px;
+.forgot-p{
+    font-family: "Poppins";
+    font-size: 10px;
+    font-weight: 400;
     color: #BBB;
+    text-align: end;
 }
 
-.signup-btn{
+.add-btn{
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
     height: 50px;
     border: none;
@@ -263,6 +213,37 @@ textarea{
     letter-spacing: -0.3px;
     text-align: center;
 }
+.blog-image-input, .content-input{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 350px;
+    height: 50px;
+    border: 1px solid #BBB;
+    border-radius: 8px;
+    background: transparent;
+}
+
+.blog-image-label, .content-label{
+    font-family: "Poppins";
+    font-size: 12px;
+    color: #BBB;
+    font-weight: 400;
+}
+
+textarea{
+    margin-top: 10px;
+    height: 140px;
+    background: transparent;
+    border: 1px solid #BBB;
+    border-radius: 8px;
+}
+
+#content-text{
+    margin-top: 12px;
+    margin-bottom: 22px;
+    color: #BBB;
+}
+
 
 /* FOOTER */
 
