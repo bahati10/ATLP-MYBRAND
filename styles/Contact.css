@@ -153,7 +153,7 @@ textarea:focus, input:focus{
     margin-bottom: 40px;
 }
 
-.signup-form{
+.message-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -239,7 +239,7 @@ textarea{
     color: #BBB;
 }
 
-.signup-btn{
+.send-btn{
     margin-bottom: 10px;
     margin-top: 20px;
     width: 100%;
@@ -253,17 +253,6 @@ textarea{
     font-weight: 500;
     letter-spacing: -0.3px;
 }
-
-.registered{
-    margin-top: 30px;
-    font-family: "Poppins";
-    font-size: 11px;
-    font-weight: 500;
-    color: #838282;
-    letter-spacing: -0.3px;
-    text-align: center;
-}
-
 /* FOOTER */
 
 .footer{

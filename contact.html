@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/Contact.css">
-    <title>Signup</title>
+    <title>Contact</title>
 </head>
 <body>
     <div class="container">
@@ -22,9 +22,11 @@
                 </ul>        
             </div>
             <div class="contact">
-                <button class="contact">
+                <a href="#">
+                    <button class="contact">
                     Say Hello
-                </button>
+                    </button>
+                </a>
             </div>
         </div>
         <div class="middle-body">
@@ -33,7 +35,7 @@
                     <span class="title">Send A Message</span><br>
                     <span class="subtitle">Let’s connect</span><br>
                     </span><br>
-                    <form action="" class="signup-form">
+                    <form action="" class="message-form">
                         <div class="icon-holder">
                             <a href="mailto:bahatiyves10@gmail.com"><img src="/assets/GMAIL.svg" alt="Gmail logo" class="google-logo"></a>
                             <a href="https://github.com/bahati10"><img src="/assets/GITHUB.svg" alt="Github logo" class="google-logo"></a>
@@ -52,12 +54,11 @@
                             </div>
                         </div>
                         <div class="input-labels"></div>
-                        <label for="blog-image" class="blog-image-label">Image</label>
-                        <input type="text" class="blog-image-input">
+                        <label for="Email" class="email-label">Email</label>
+                        <input type="text" class="email-input">
                         <label for="Message" class="message-label">Message</label>
                         <textarea name="Message" id="message-text" cols="3" rows="10"></textarea>
-                        <button class="signup-btn">Sign Up</button>
-                        <span class="registered">Aleady Registered?  <a href="/login.html">Login here</a></span>
+                        <button class="send-btn">Send</button>
                     </form>
                 </h5>
             </div>
