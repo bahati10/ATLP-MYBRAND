@@ -66,8 +66,8 @@ a{
     font-family: "Poppins";
 }
 
-ul .second a{
-    color: red;
+.second a{
+    color: #918F8F;
 }
 
 .logo-container{
@@ -159,7 +159,7 @@ th, td{
 }
 
 td{
-    height: fit-content;
+    height: 40px;
     color: #BBB;
     font-family: "Poppins";
     font-size: 16px;
