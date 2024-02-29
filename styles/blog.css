@@ -137,6 +137,25 @@ input:focus{
     outline: none;
 }
 
+.addblog{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 1180px;
+    height: 100px;
+}
+
+.add-blog-btn{
+    width: 130px;
+    height: 40px;
+    font-family: "Poppins";
+    font-size: 14px;
+    color: #080E11;
+    background: #BBB;
+    border: none;
+    border-radius: 1px;
+}
+
 .blog-holder{
     display: flex;
     flex-direction: row;
