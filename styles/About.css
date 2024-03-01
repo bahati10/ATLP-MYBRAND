@@ -21,7 +21,7 @@ a{
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 10px;
 }
 
 .navbar{
@@ -35,8 +35,7 @@ a{
 
 .toolbar{
     width: clamp(370px, 90%, 540px);
-    height: clamp(40px, 90%, 55px);
-    height: 55px;
+    height: clamp(45px,3vw, 55px);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,35 +47,37 @@ a{
 }
 
 .home-icon{
-    margin-left: -25px;
-    width: 26px;
-    height: 26px;
+    width: clamp(20px, 3vw, 26px);
+    height: clamp(20px, 3vw, 26px);
+    margin-left: -20px;
 }
 
 .toolbar ul{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding-right: 9px;
 }
 
 .toolbar ul li{
     display: inline;
     color: #BBB;
-    font-size: 14.7px;
+    font-size: clamp(12px, 3vw, 14.7px);
     font-family: "Poppins";
 }
 
 .logo-container{
     width: 150px;
     display: flex;
-    align-items: center;
+    justify-content: start;
 }
 
 .logo{
     width: clamp(55px, 7vw, 70px);
     height: clamp(40px, 5vw, 60px); 
+    margin-left: -6px;
 }
 
 
@@ -132,7 +133,7 @@ a{
 
 .des{
     font-family: "Poppins";
-    font-size: clamp(14px, 3vw, 20px);
+    font-size: clamp(18.2px, 3vw, 20px);
     color: #BBB;
     font-weight: 400;
 }
