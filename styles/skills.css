@@ -14,7 +14,6 @@ a{
 }
 
 .container{
-    /* border: 2px solid red; */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -26,7 +25,6 @@ a{
 }
 
 .navbar{
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -42,16 +40,16 @@ a{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: RGB(8, 14, 17, 0.9);
     border: 2px solid #292929;
     border-radius: 40px;
     backdrop-filter: blur(3px);
-    /* background: rgb(14, 17, 0.9); */
 }
 
 .home-icon{
     margin-left: -25px;
-    width: 26px;
-    height: 26px;
+    width: clamp(20px, 3vw, 26px);
+    height: clamp(20px, 3vw, 26px);
 }
 
 .toolbar ul{
@@ -65,7 +63,7 @@ a{
 .toolbar ul li{
     display: inline;
     color: #BBB;
-    font-size: 14.7px;
+    font-size: clamp(12px, 3vw, 14.7px);
     font-family: "Poppins";
 }
 
@@ -76,25 +74,25 @@ a{
 }
 
 .logo{
-    width: 60px;
-    height: 50px;
+    width: clamp(55px, 7vw, 70px);
+    height: clamp(40px, 5vw, 60px); 
 }
 
 
 .contact{
-    width: 150px;
+    width: clamp(120px, 7vw, 150px);
+    height: clamp(40px, 5vw, 60px); 
     display: flex;
     justify-content: center;
     align-items: center;
     background: #080E11;
-    /* padding: 8px 24px; */
 }
 
 .contact button{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 45px;
+    height: clamp(40px, 3vw, 45px);
     border: 2px solid #BBB;
     border-radius: 40px;
     color: #BBB;
@@ -109,6 +107,7 @@ a{
     justify-content: center;
     width: 100%;
     height: 90vh;
+    border: 2px solid red;
 }
 
 .text-part{
@@ -116,7 +115,7 @@ a{
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 940px;
+    width: 80%;
 }
 
 .title{
@@ -136,7 +135,7 @@ a{
 }
 
 .description{
-    width: 940px;
+    width: 100%;
     font-family: "Poppins";
     font-weight: 400;
     font-size: 22px;
@@ -152,8 +151,8 @@ a{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 70px;
+    width: clamp(170px, 70%, 250px);
+    height: clamp(40px, 70%, 70px);
     border: 0.3px solid #292929; 
     border-radius: 50px;
     color: #BBB;
@@ -169,14 +168,14 @@ a{
 
 .name-text{
     font-family: "Inter";
-    font-size: 25px;
+    width: clamp(20px, 7vw, 25px);
     color: #BBB;
     font-weight: 600;
 }
 
 .skill .icon{
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 7vw, 40px);
+    height: clamp(30px, 7vw, 40px);
     color: #BBB;
     margin-right: 3px;
 }
@@ -199,4 +198,17 @@ a{
     color: #BBB;
     font-weight: 500;
     border-radius: 40px;
+}
+
+@media (max-width: 1094px) {
+    .toolbar{
+        position: fixed; 
+        bottom: 0;
+        left: 0; 
+        right: 0; 
+        margin: 0 auto 70px auto;
+    }
+    .footer{
+        border: none;
+    }
 }
