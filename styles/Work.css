@@ -14,7 +14,6 @@ a{
 }
 
 .container{
-    /* border: 2px solid red; */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -26,7 +25,6 @@ a{
 }
 
 .navbar{
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,66 +33,73 @@ a{
     align-items: center;
 }
 
-.toolbar{
-    width: 540px;
+.toolbar {
+    width: clamp(250px, 50%, 540px); 
     height: 55px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: RGB(8, 14, 17, 0.9);
     border: 2px solid #292929;
     border-radius: 40px;
     backdrop-filter: blur(3px);
-    /* background: rgb(14, 17, 0.9); */
+    overflow: hidden; 
+    z-index: 555555;
 }
 
-.home-icon{
-    margin-left: -25px;
-    width: 26px;
-    height: 26px;
-}
-
-.toolbar ul{
+.toolbar ul {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
 }
 
-.toolbar ul li{
+.toolbar ul li {
     display: inline;
     color: #BBB;
-    font-size: 14.7px;
+    font-size: clamp(12px, 3vw, 14.7px);
     font-family: "Poppins";
+    overflow: hidden;
+    white-space: nowrap; 
 }
 
-.logo-container{
-    width: 150px;
+.logo-container {
+    width: clamp(100px, 20%, 150px);
     display: flex;
     align-items: center;
+    overflow: hidden; 
 }
 
-.logo{
-    width: 60px;
-    height: 50px;
+.logo {
+    width: clamp(55px, 7vw, 70px);
+    height: clamp(40px, 5vw, 60px);
+    overflow: hidden;
 }
 
+
+.home-icon{
+    margin-left: -25px;
+    width: clamp(20px, 3vw, 26px);
+    height: clamp(20px, 3vw, 26px);
+}
 
 .contact{
-    width: 150px;
+    width: clamp(120px, 7vw, 150px);
+    height: clamp(40px, 5vw, 60px); 
     display: flex;
     justify-content: center;
     align-items: center;
     background: #080E11;
-    /* padding: 8px 24px; */
 }
 
 .contact button{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 45px;
+    height: clamp(40px, 3vw, 45px);
     border: 2px solid #BBB;
     border-radius: 40px;
     color: #BBB;
@@ -110,8 +115,7 @@ a{
     align-items: center;
     width: 100%;
     height: 90vh;
-    overflow: scroll;
-
+    overflow: auto;
 }
 
 .text-part{
@@ -122,7 +126,7 @@ a{
     flex-wrap: wrap;
     align-items: start;
     text-align: center;
-    width: 1200px;
+    width: 90%;
     margin-bottom: 30px;
 }
 
@@ -145,7 +149,6 @@ a{
 }
 
 .img-container{
-    /* border: 2px solid green; */
     width: 100%;
     height: 180px;
     overflow: hidden;
@@ -195,6 +198,7 @@ a{
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
     transition: 0.5s ease;
     margin: 0 5px;
+    margin-bottom: 5px;
     padding: 0 17px;
 }
 
@@ -220,4 +224,21 @@ a{
     color: #BBB;
     font-weight: 500;
     border-radius: 40px;
+}
+
+@media (max-width: 1094px) {
+    .toolbar{
+        position: fixed; 
+        bottom: 0;
+        left: 0; 
+        right: 0; 
+        margin: 0 auto 70px auto;
+    }
+    .footer{
+        border: none;
+    }
+
+    .text-part{
+        margin-bottom: 90px;
+    }
 }
