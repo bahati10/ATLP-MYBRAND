@@ -14,7 +14,6 @@ a{
 }
 
 .container{
-    /* border: 2px solid red; */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -26,7 +25,6 @@ a{
 }
 
 .navbar{
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,7 +34,7 @@ a{
 }
 
 .toolbar{
-    width: 540px;
+    width: clamp(250px, 50%, 540px); 
     height: 55px;
     display: flex;
     flex-direction: row;
@@ -45,13 +43,12 @@ a{
     border: 2px solid #292929;
     border-radius: 40px;
     backdrop-filter: blur(3px);
-    /* background: rgb(14, 17, 0.9); */
 }
 
 .home-icon{
     margin-left: -25px;
-    width: 26px;
-    height: 26px;
+    width: clamp(20px, 3vw, 26px);
+    height: clamp(20px, 3vw, 26px);
 }
 
 .toolbar ul{
@@ -65,36 +62,38 @@ a{
 .toolbar ul li{
     display: inline;
     color: #BBB;
-    font-size: 14.7px;
+    font-size: clamp(12px, 3vw, 14.7px);
     font-family: "Poppins";
 }
 
 .logo-container{
-    width: 150px;
+    width: clamp(100px, 20%, 150px);
     display: flex;
     align-items: center;
 }
 
 .logo{
+    width: clamp(55px, 7vw, 70px);
+    height: clamp(40px, 5vw, 60px);
     width: 60px;
     height: 50px;
 }
 
 
 .login{
-    width: 150px;
+    width: clamp(120px, 7vw, 150px);
+    height: clamp(40px, 5vw, 60px); 
     display: flex;
     justify-content: center;
     align-items: center;
     background: #080E11;
-    /* padding: 8px 24px; */
 }
 
 .login button{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 45px;
+    height: clamp(40px, 3vw, 45px);
     border: 2px solid #BBB;
     border-radius: 40px;
     color: #BBB;
@@ -105,21 +104,24 @@ a{
 /* BLOG*/
 
 .blog-container{
-    margin-top: 50px;
+    margin-top: clamp(20px, 5vh, 50px);
+    margin-bottom: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: clamp(300px, 90%, 100%);
+    height: auto;
+    overflow: auto;
     width: 100%;
     height: fit-content;
     overflow: auto;
-    /* border: 2px solid grey; */
 }
 
 .search-input{
-    width: 380px;
-    height: 50px;
-    margin-bottom: 20px;
+    width: clamp(200px, 40%, 380px);
+    height: clamp(40px, 8vh, 50px);
+    margin-bottom: clamp(10px, 2vh, 20px);
     color: #BBB;
     font-family: "Poppins";
     font-size: 14px;
@@ -141,8 +143,9 @@ input:focus{
     display: flex;
     justify-content: end;
     align-items: center;
-    width: 1180px;
+    width: 90%;
     height: 100px;
+    margin-bottom: 30px;
 }
 
 .add-blog-btn{
@@ -161,9 +164,8 @@ input:focus{
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
     overflow: auto;
-    /* border: 2px solid red; */
 }
 
 .blog{
@@ -232,4 +234,23 @@ input:focus{
     color: #BBB;
     font-weight: 500;
     border-radius: 40px;
+}
+
+@media (max-width: 1094px) {
+    .toolbar{
+        position: fixed; 
+        bottom: 0;
+        left: 0; 
+        right: 0; 
+        margin: 0 auto 70px auto;
+    }
+    .footer{
+        border: none;
+    }
+}
+
+@media (max-width: 941px) {
+    /* .addblog{
+        justify-content: center;
+    } */
 }
