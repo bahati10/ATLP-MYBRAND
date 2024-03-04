@@ -28,14 +28,14 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     height: 60px;
     align-items: center;
+    padding: 0 10px;
 }
 
 .toolbar {
-    width: clamp(250px, 50%, 540px); 
-    height: 55px;
+    width: clamp(300px, 50%, 540px); 
+    height: clamp(40px, 10vw, 55px);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,30 +59,26 @@ a{
 .toolbar ul li {
     display: inline;
     color: #BBB;
-    font-size: clamp(12px, 3vw, 14.7px);
+    font-size: clamp(10px, 3vw, 14.7px);
     font-family: "Poppins";
-    overflow: hidden;
-    white-space: nowrap; 
 }
 
 .logo-container {
     width: clamp(100px, 20%, 150px);
     display: flex;
     align-items: center;
-    overflow: hidden; 
 }
 
 .logo {
     width: clamp(55px, 7vw, 70px);
     height: clamp(40px, 5vw, 60px);
-    overflow: hidden;
 }
 
 
 .home-icon{
+    width: clamp(15px, 3vw, 26px);
+    height: clamp(15px, 3vw, 26px);
     margin-left: -25px;
-    width: clamp(20px, 3vw, 26px);
-    height: clamp(20px, 3vw, 26px);
 }
 
 .contact{
