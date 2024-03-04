@@ -28,27 +28,28 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     height: 60px;
     align-items: center;
+    padding: 0 10px;
 }
 
 .toolbar{
-    width: clamp(250px, 50%, 540px); 
-    height: 55px;
+    width: clamp(300px, 50%, 540px); 
+    height: clamp(40px, 10vw, 55px);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: RGB(8, 14, 17, 0.9);
     border: 2px solid #292929;
     border-radius: 40px;
     backdrop-filter: blur(3px);
 }
 
 .home-icon{
+    width: clamp(15px, 3vw, 26px);
+    height: clamp(15px, 3vw, 26px);
     margin-left: -25px;
-    width: clamp(20px, 3vw, 26px);
-    height: clamp(20px, 3vw, 26px);
 }
 
 .toolbar ul{
@@ -62,7 +63,7 @@ a{
 .toolbar ul li{
     display: inline;
     color: #BBB;
-    font-size: clamp(12px, 3vw, 14.7px);
+    font-size: clamp(10px, 3vw, 14.7px);
     font-family: "Poppins";
 }
 
@@ -75,8 +76,6 @@ a{
 .logo{
     width: clamp(55px, 7vw, 70px);
     height: clamp(40px, 5vw, 60px);
-    width: 60px;
-    height: 50px;
 }
 
 
@@ -98,24 +97,26 @@ a{
     border-radius: 40px;
     color: #BBB;
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* BLOG*/
 
 .blog-container{
-    margin-top: clamp(20px, 5vh, 50px);
-    margin-bottom: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: clamp(300px, 90%, 100%);
-    height: auto;
-    overflow: auto;
+    margin-top: 50px;
+    margin-bottom: 90px;
     width: 100%;
-    height: fit-content;
     overflow: auto;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    width: 70%;
 }
 
 .search-input{
@@ -128,7 +129,6 @@ a{
     background: none;
     border: 1px solid #BBB;
     border-radius: 4px;
-    padding: 0 14px;
 }
 
 input::placeholder{
@@ -164,12 +164,13 @@ input:focus{
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    width: 90%;
+    width: clamp(300px, 90%, 1000px);
     overflow: auto;
 }
 
 .blog{
-    width: 353px;
+    width: clamp(250px, 80%, 353px);
+    max-width: 100%; 
     height: 420px;
     margin:  30px;
     background: #1F1E1E;
@@ -247,10 +248,4 @@ input:focus{
     .footer{
         border: none;
     }
-}
-
-@media (max-width: 941px) {
-    /* .addblog{
-        justify-content: center;
-    } */
 }
