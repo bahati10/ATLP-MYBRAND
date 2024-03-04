@@ -21,63 +21,61 @@ a{
     position: relative;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 20px 0;
 }
 
 .navbar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     height: 60px;
     align-items: center;
+    padding: 0 10px;
 }
 
 .toolbar{
-    width: clamp(370px, 90%, 540px);
-    height: clamp(45px,3vw, 55px);
+    width: clamp(300px, 50%, 540px); 
+    height: clamp(40px, 10vw, 55px);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: RGB(8, 14, 17, 0.9);
+    background: RGB(8, 14, 17, 0.7);
     border: 2px solid #292929;
     border-radius: 40px;
     backdrop-filter: blur(3px);
 }
 
 .home-icon{
-    width: clamp(20px, 3vw, 26px);
-    height: clamp(20px, 3vw, 26px);
-    margin-left: -20px;
+    width: clamp(15px, 3vw, 26px);
+    height: clamp(15px, 3vw, 26px);
+    margin-left: -25px;
 }
 
 .toolbar ul{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding-right: 9px;
 }
 
 .toolbar ul li{
     display: inline;
     color: #BBB;
-    font-size: clamp(12px, 3vw, 14.7px);
+    font-size: clamp(10px, 3vw, 14.7px);
     font-family: "Poppins";
 }
 
 .logo-container{
-    width: 150px;
+    width: clamp(100px, 20%, 150px);
     display: flex;
-    justify-content: start;
+    align-items: center;
 }
 
 .logo{
     width: clamp(55px, 7vw, 70px);
-    height: clamp(40px, 5vw, 60px); 
-    margin-left: -6px;
+    height: clamp(40px, 5vw, 60px);
 }
 
 
@@ -108,7 +106,7 @@ a{
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 90vh;
+    height: 80vh;
 }
 
 .text-part{
@@ -116,8 +114,8 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-width: 540px;
-    width: 100%;
+    width: clamp(320px, 80%, 540px);
+    padding: clamp(20px, 5vw, 40px);
 }
 
 .talk-ab-me{
@@ -133,7 +131,7 @@ a{
 
 .des{
     font-family: "Poppins";
-    font-size: clamp(18.2px, 3vw, 20px);
+    font-size: clamp(16px, 4vw, 20px); 
     color: #BBB;
     font-weight: 400;
 }
@@ -169,4 +167,10 @@ a{
     .footer{
         border: none;
     }
+}
+
+@media (max-width: 651px) {
+.talk-ab-me{
+    padding: 40px 0;
+}
 }
