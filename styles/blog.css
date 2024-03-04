@@ -107,10 +107,10 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 90px;
+    margin-top: clamp(20px, 5vh, 50px);
+    margin-bottom: clamp(40px, 10vh, 90px);
     width: 100%;
-    overflow: auto;
+    overflow-x: auto;
 }
 
 .search{
@@ -121,7 +121,7 @@ a{
 
 .search-input{
     width: clamp(200px, 40%, 380px);
-    height: clamp(40px, 8vh, 50px);
+    height: clamp(40px, 4vh, 50px);
     margin-bottom: clamp(10px, 2vh, 20px);
     color: #BBB;
     font-family: "Poppins";
@@ -143,9 +143,10 @@ input:focus{
     display: flex;
     justify-content: end;
     align-items: center;
-    width: 90%;
-    height: 100px;
-    margin-bottom: 30px;
+    width: clamp(700px, 80%, 90%);
+    max-width: 100%;
+    height: clamp(100px, 10vh, 150px);
+    margin-bottom: clamp(20px, 5vh, 30px);
 }
 
 .add-blog-btn{
@@ -164,7 +165,7 @@ input:focus{
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    width: clamp(300px, 90%, 1000px);
+    width: 90%;
     overflow: auto;
 }
 
