@@ -14,7 +14,6 @@ a{
 }
 
 .container{
-    /* border: 2px solid red; */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -26,32 +25,31 @@ a{
 }
 
 .navbar{
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     height: 60px;
     align-items: center;
+    padding: 0 10px;
 }
 
 .toolbar{
-    width: 540px;
-    height: 55px;
+    width: clamp(300px, 50%, 540px); 
+    height: clamp(40px, 10vw, 55px);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: RGB(8, 14, 17, 0.7);
     border: 2px solid #292929;
     border-radius: 40px;
     backdrop-filter: blur(3px);
-    /* background: rgb(14, 17, 0.9); */
 }
 
 .home-icon{
+    width: clamp(15px, 3vw, 26px);
+    height: clamp(15px, 3vw, 26px);
     margin-left: -25px;
-    width: 26px;
-    height: 26px;
 }
 
 .toolbar ul{
@@ -65,36 +63,36 @@ a{
 .toolbar ul li{
     display: inline;
     color: #BBB;
-    font-size: 14.7px;
+    font-size: clamp(10px, 3vw, 14.7px);
     font-family: "Poppins";
 }
 
 .logo-container{
-    width: 150px;
+    width: clamp(100px, 20%, 150px);
     display: flex;
     align-items: center;
 }
 
 .logo{
-    width: 60px;
-    height: 50px;
+    width: clamp(55px, 7vw, 70px);
+    height: clamp(40px, 5vw, 60px);
 }
 
 
 .contact{
-    width: 150px;
+    width: clamp(120px, 7vw, 150px);
+    height: clamp(40px, 5vw, 60px); 
     display: flex;
     justify-content: center;
     align-items: center;
     background: #080E11;
-    /* padding: 8px 24px; */
 }
 
 .contact button{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 45px;
+    height: clamp(40px, 3vw, 45px);
     border: 2px solid #BBB;
     border-radius: 40px;
     color: #BBB;
@@ -110,32 +108,30 @@ a{
     align-items: center;
     width: 100%;
     height: 80vh;
-    /* border: 2px solid red; */
 }
 
 .text-part{
     display: flex;
     flex-direction: column;
-    width: 540px;
-    padding: 40px;
+    width: clamp(320px, 80%, 540px);
+    padding: clamp(20px, 5vw, 40px) clamp(20px, 5vw, 40px);
 }
 
 .talk-ab-me{
     height: 100%;
-    padding: 40px;
-    /* border: 2px solid yellow; */
+    padding: clamp(5px, 5vw, 40px);
 }
 
 .title{
     font-family: "Poppins";
-    font-size: 20px;
+    font-size: clamp(16px, 4vw, 20px); 
     color: #FFF;
     font-weight: 400;
 }
 
 .subtitle{
     font-family: "Poppins";
-    font-size: 12px;
+    font-size: clamp(10px, 2vw, 12px);
     color: #BBB;
     font-weight: 300;
 }
@@ -143,22 +139,21 @@ a{
 .or{
     text-align: center;
     font-family: "Poppins";
-    font-size: 12px;
+    font-size: clamp(10px, 2vw, 12px);
     color: #BBB;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: clamp(5px, 2vw, 20px);
 }
 
 .login-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 2px solid orange; */
 }
 
 .google{
     width: 100%;
-    height: 50px;
+    height: clamp(40px, 8vw, 50px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,16 +164,16 @@ a{
 
 .google-text{
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: clamp(10px, 2vw, 14px);
     font-weight: 400;
     color: #BBB;
 }
 
 .email-input{
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin-bottom: clamp(6px, 1vw, 30px);
+    margin-top: clamp(5px, 2vw, 20px); 
     width: 99%;
-    height: 50px;
+    height: clamp(40px, 8vw, 50px);
     border: 1px solid #BBB;
     border-radius: 8px;
     background: transparent;
@@ -190,7 +185,7 @@ a{
     margin-bottom: 6px;
     margin-top: 10px;
     width: 99%;
-    height: 50px;
+    height: clamp(40px, 8vw, 50px);
     border: 1px solid #BBB;
     border-radius: 8px;
     background: transparent;
@@ -199,38 +194,38 @@ a{
 
 .email-label, .password-label{
     font-family: "Poppins";
-    font-size: 12px;
+    font-size: clamp(8px, 2vw, 12px);
     color: #BBB;
     font-weight: 400;
 }
 
 .forgot-p{
     font-family: "Poppins";
-    font-size: 10px;
+    font-size: clamp(8px, 2vw, 10px);
     font-weight: 400;
     color: #BBB;
     text-align: end;
 }
 
 .login-btn{
-    margin-bottom: 10px;
-    margin-top: 30px;
+    margin-bottom: clamp(6px, 1vw, 10px);
+    margin-top: clamp(20px, 4vw, 30px);
     width: 100%;
-    height: 50px;
+    height: clamp(40px, 8vw, 50px);
     border: none;
     border-radius: 8px;
     background: #BBB;
     color: #080E11;
     font-family: "Poppins";
-    font-size: 14px;
+    font-size: clamp(10px, 2vw, 14px);
     font-weight: 500;
     letter-spacing: -0.3px;
 }
 
 .registered{
-    margin-top: 30px;
+    margin-top: clamp(20px, 4vw, 30px);
     font-family: "Poppins";
-    font-size: 11px;
+    font-size: clamp(9px, 2vw, 11px);
     font-weight: 500;
     color: #838282;
     letter-spacing: -0.3px;
@@ -254,4 +249,17 @@ a{
     color: #BBB;
     font-weight: 500;
     border-radius: 40px;
+}
+
+@media (max-width: 1094px) {
+    .toolbar{
+        position: fixed; 
+        bottom: 0;
+        left: 0; 
+        right: 0; 
+        margin: 0 auto 70px auto;
+    }
+    .footer{
+        border: none;
+    }
 }
