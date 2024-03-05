@@ -15,7 +15,6 @@ a{
 }
 
 .container{
-    /* border: 2px solid red; */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -27,32 +26,31 @@ a{
 }
 
 .navbar{
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     height: 60px;
     align-items: center;
+    padding: 0 10px;
 }
 
 .toolbar{
-    width: 540px;
-    height: 55px;
+    width: clamp(300px, 50%, 540px); 
+    height: clamp(40px, 10vw, 55px);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: RGB(8, 14, 17, 0.7);
     border: 2px solid #292929;
     border-radius: 40px;
     backdrop-filter: blur(3px);
-    /* background: rgb(14, 17, 0.9); */
 }
 
 .home-icon{
+    width: clamp(15px, 3vw, 26px);
+    height: clamp(15px, 3vw, 26px);
     margin-left: -25px;
-    width: 26px;
-    height: 26px;
 }
 
 .toolbar ul{
@@ -66,36 +64,36 @@ a{
 .toolbar ul li{
     display: inline;
     color: #BBB;
-    font-size: 14.7px;
+    font-size: clamp(10px, 3vw, 14.7px);
     font-family: "Poppins";
 }
 
 .logo-container{
-    width: 150px;
+    width: clamp(100px, 20%, 150px);
     display: flex;
     align-items: center;
 }
 
 .logo{
-    width: 60px;
-    height: 50px;
+    width: clamp(55px, 7vw, 70px);
+    height: clamp(40px, 5vw, 60px);
 }
 
 
 .contact{
-    width: 150px;
+    width: clamp(120px, 7vw, 150px);
+    height: clamp(40px, 5vw, 60px); 
     display: flex;
     justify-content: center;
     align-items: center;
     background: #080E11;
-    /* padding: 8px 24px; */
 }
 
 .contact button{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 45px;
+    height: clamp(40px, 3vw, 45px);
     border: 2px solid #BBB;
     border-radius: 40px;
     color: #BBB;
@@ -114,8 +112,8 @@ a{
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: #080E11;
-    opacity: 80%;
+    background: RGB(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
 }
 
 .box-model{
@@ -124,8 +122,7 @@ a{
     border: 2px solid #BBB;
     border-radius: 5px;
     overflow: hidden;
-    background: #000;
-    opacity: 100%;
+    background: RGB(0, 0, 0, 0.9);
 }
 
 .confirm-text{
@@ -150,8 +147,9 @@ a{
 }
 
 .confirmation-boxes button{
-    width: 100px;
-    height: 35px;
+    width: clamp(80px, 10vw, 100px);
+    height: clamp(30px, 5vw, 40px);
+    font-size: clamp(12px, 1.5vw, 16px);
     border-radius: 3px;
 }
 
@@ -165,24 +163,31 @@ a{
     background: transparent;
 }
 
+.cancel-btn,
+.delete-btn {
+    width: clamp(80px, 10vw, 100px);
+    height: clamp(30px, 5vw, 40px);
+    font-size: clamp(12px, 1.5vw, 16px);
+    font-weight: 500;
+}
+
 .middle-body{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 90vh;
-    /* border: 2px solid grey; */
-    overflow: scroll;
+    height: calc(100vh - 190px);
+    overflow-y: scroll;
+    overflow-x: hidden; 
 }
 
 .author{
     width: 100%;
     margin-top: 70px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 320;
+    font-size: clamp(14px, 2vw, 16px);
     color: #BBB;
 }
 
@@ -191,10 +196,11 @@ a{
     justify-content: center;
     align-items: center;
     width: 340px;
-    height: 50px;
+    height: clamp(40px, 8vw, 50px);  
     background: transparent;
-    border: 2px solid #BBB;
+    border: 1px solid #BBB;
     border-radius: 5px;
+    font-weight: lighter;
 }
 
 
@@ -202,68 +208,68 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 780px;
-    /* border: 2px solid purple; */
+    width: clamp(340px, 60vw, 780px);
     margin: 40px 0;
 }
 
-.blog-image-container{
-    width: 780px;
-    height: 520px;
+.blog-image-container {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.blog-image{
-    height: 830px;
-    height: 540px;
+.blog-image {
+    width: 100%;
+    height: auto;
     border-radius: 4px;
 }
 
 .like-btn{
     display: flex;
     align-items: center;
-    /* border: 2px solid red; */
-    height: 60px;
+    height: clamp(40px, 5vw, 60px);
 }
 
 .like-btn img{
-    width: 25px;
-    height: 25px;
+    width: clamp(20px, 3vw, 30px);
+    height: clamp(20px, 3vw, 30px);
 }
 
 .title{
     display: flex;
     justify-content: center;
     font-family: "Inter";
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
     font-weight: 600;
     color: #DDD;
     margin: 10px 0;
     letter-spacing: -0.3px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .main-content{
     font-family: "Poppins";
-    font-size: 18px;
+    font-size: clamp(14px, 1.5vw, 18px);
     color: #BBB;
-    font-weight: 350;
+    font-weight: 400;
+    border: 2px solid grreen;
 }
 
 .subtitle{
     font-family: "Poppins";
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     font-weight: 600;
     margin: 40px 0;
     color: #DDD;
     text-align: center;
     padding: 0 40px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .buttons{
     display: flex;
     align-items: center;
-    /* border: 2px solid orange; */
     width: 100%;
     height: 50px;
     margin-top: 20px;
@@ -271,11 +277,11 @@ a{
 
 .buttons button{
     border-radius: 6px;
-    width: 120px;
-    height: 50px;
+        width: clamp(80px, 10vw, 100px);
+        height: clamp(30px, 5vw, 40px);
+        font-size: clamp(12px, 1.5vw, 16px);
     font-family: "Poppins";
     font-weight: 400;
-    font-size: 16px;
 }
 
 .update{
@@ -297,13 +303,13 @@ a{
 
 .comments-title{
     font-family: "Poppins";
-    font-size: 15px;
+    font-size: clamp(12px, 2vw, 15px);
     color: #DDD;
     margin-bottom: 35px;
 }
 
 .comment-box{
-    width: 400px;
+    width: clamp(300px, 40vw, 420px);
     height: fit-content;
     padding: 10px;
     border: 1px solid #BBB;
@@ -338,8 +344,9 @@ a{
 }
 
 .comment-input{
-    width: 400px;
-    height: 80px;
+    width: clamp(300px, 40vw, 420px);
+    height: clamp(50px, 8vw, 80px);
+    font-size: clamp(12px, 1.5vw, 16px);
     font-family: "Poppins";
     color: #BBB;
     border: 1px solid #BBB;
@@ -357,27 +364,22 @@ a{
 .post-button-container{
     display: flex;
     justify-content: flex-end;
+    width: clamp(320px, 40vw, 440px);
 }
 
 .add-comment .post{
-    width: 95px;
-    height: 35px;
+    width: clamp(80px, 10vw, 95px);
+    height: clamp(30px, 5vw, 35px);
+    font-size: clamp(12px, 1.5vw, 14px);
     background: #BBB;
     border: none;
     border-radius: 4px;
     font-family: "Poppins";
-    font-size: 14px;
 }
 
 input:focus{
     outline: none;
 }
-
-
-
-
-
-
 
 
 
@@ -398,4 +400,17 @@ input:focus{
     color: #BBB;
     font-weight: 500;
     border-radius: 40px;
+}
+
+@media (max-width: 1094px) {
+    .toolbar{
+        position: fixed; 
+        bottom: 0;
+        left: 0; 
+        right: 0; 
+        margin: 0 auto 70px auto;
+    }
+    .footer{
+        border: none;
+    }
 }
