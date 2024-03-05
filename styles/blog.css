@@ -120,8 +120,8 @@ a{
 }
 
 .search-input{
-    width: clamp(200px, 40%, 380px);
-    height: clamp(40px, 4vh, 50px);
+    width: clamp(340px, 40%, 380px);
+    height: clamp(40px, 8vw, 50px);
     margin-bottom: clamp(10px, 2vh, 20px);
     color: #BBB;
     font-family: "Poppins";
@@ -129,6 +129,7 @@ a{
     background: none;
     border: 1px solid #BBB;
     border-radius: 4px;
+    padding: 0 10px;
 }
 
 input::placeholder{
@@ -141,7 +142,7 @@ input:focus{
 
 .addblog{
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     width: clamp(700px, 80%, 90%);
     max-width: 100%;
@@ -150,8 +151,8 @@ input:focus{
 }
 
 .add-blog-btn{
-    width: 130px;
-    height: 40px;
+    width: clamp(100px, 10vw, 130px);
+    height: clamp(30px, 8vh, 40px);
     font-family: "Poppins";
     font-size: 14px;
     color: #080E11;
