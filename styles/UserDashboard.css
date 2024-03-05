@@ -28,27 +28,28 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     height: 60px;
     align-items: center;
+    padding: 0 10px;
 }
 
 .toolbar{
-    width: 540px;
-    height: 55px;
+    width: clamp(300px, 50%, 540px); 
+    height: clamp(40px, 10vw, 55px);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background: RGB(8, 14, 17, 0.7);
     border: 2px solid #292929;
     border-radius: 40px;
     backdrop-filter: blur(3px);
 }
 
 .home-icon{
+    width: clamp(15px, 3vw, 26px);
+    height: clamp(15px, 3vw, 26px);
     margin-left: -25px;
-    width: 26px;
-    height: 26px;
 }
 
 .toolbar ul{
@@ -62,7 +63,7 @@ a{
 .toolbar ul li{
     display: inline;
     color: #BBB;
-    font-size: 14.7px;
+    font-size: clamp(10px, 3vw, 14.7px);
     font-family: "Poppins";
 }
 
@@ -71,19 +72,20 @@ ul .first a{
 }
 
 .logo-container{
-    width: 150px;
+    width: clamp(100px, 20%, 150px);
     display: flex;
     align-items: center;
 }
 
 .logo{
-    width: 60px;
-    height: 50px;
+    width: clamp(55px, 7vw, 70px);
+    height: clamp(40px, 5vw, 60px);
 }
 
 
 .contact{
-    width: 150px;
+    width: clamp(120px, 7vw, 150px);
+    height: clamp(40px, 5vw, 60px); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,7 +96,7 @@ ul .first a{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 45px;
+    height: clamp(40px, 3vw, 45px);
     border: 2px solid #BBB;
     border-radius: 40px;
     color: #BBB;
@@ -115,7 +117,7 @@ ul .first a{
 .text-part{
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    width: clamp(300px, 90%, 1200px);
     height: fit-content;
     margin: 50px 0;
 }
@@ -142,18 +144,19 @@ table caption{
     color: #DDD;
     margin: 6px 0;
     letter-spacing: -0.7px;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
 }
 
 .table-heads{
     color: #DDD;
     font-family: "Poppins";
     font-weight: 600;
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     text-align: start;
 }
 
 th, td{
-    height: 50px;
+    /* height: 50px; */
     padding-left: 8px;
     border: 1px solid #292929;
 }
@@ -166,20 +169,18 @@ td{
     font-weight: 400;
 }
 
-tr .names{
-    width: 300px;
+tr .names {
+    width: clamp(200px, 30%, 300px);
 }
-
-tr .number{
-    width: 90px;
+tr .number {
+    width: clamp(70px, 10%, 90px);
     text-align: center;
 }
-tr .email{
-    width: 300px;
+tr .email {
+    width: clamp(200px, 30%, 300px);
 }
-
-tr .action{
-    width: 160px;
+tr .action {
+    width: clamp(120px, 20%, 160px);
 }
 
 .delete-text a{
@@ -187,27 +188,9 @@ tr .action{
     color: #E87B7B;
 }
 
-
-
 .action{
     border: 1px solid #292929;
     color: #E87B7B;
-}
-
-
-
-.title{
-    font-family: "Inter";
-    font-size: 60px;
-    color: #BBB;
-    letter-spacing: -1.7px;
-}
-
-.des{
-    font-family: "Poppins";
-    font-size: 20px;
-    color: #BBB;
-    font-weight: 400;
 }
 
 
@@ -228,4 +211,17 @@ tr .action{
     color: #BBB;
     font-weight: 500;
     border-radius: 40px;
+}
+
+@media (max-width: 1094px) {
+    .toolbar{
+        position: fixed; 
+        bottom: 0;
+        left: 0; 
+        right: 0; 
+        margin: 0 auto 70px auto;
+    }
+    .footer{
+        border: none;
+    }
 }
