@@ -41,13 +41,14 @@
                             <span class="google-text">&nbsp&nbspContinue with Google</span>
                         </div>
                         <span class="or">..............Or..............</span><br>
-                        <label for="Email" class="email-label">Email</label>
-                        <input type="text" class="email-input">
-                        <label for="Password" class="password-label">Password</label>
-                        <input type="password" class="password-input">
+                        <label for="email" class="email-label">Email</label>
+                        <input type="text" class="email-input" id="email" onkeyup="validateEmail()" autocomplete="none">
+                        <label for="password" class="password-label">Password</label>
+                        <input type="password" class="password-input" id="password" onkeyup="validatePassword()" autocomplete="none">
                         <span class="forgot-p"><a href="/forgot.html">Forgot Password?</a></span>
 
                         <button class="login-btn">Login</button>
+                        <span class="submit-error"></span>
                         <span class="registered">No yet Registered? <a href="/signup.html">Register here</a></span>
                     </form>
                 </h5>
@@ -57,5 +58,6 @@
             Made with 🇷🇼 pride by Bahati Yves
         </footer>
     </div>
+    <script src="/js/user-login.js" defer></script>
 </body>
 </html>
