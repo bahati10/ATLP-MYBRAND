@@ -118,12 +118,11 @@ a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: clamp(360px, 3vw, 420px);
+    width: clamp(340px, 3vw, 420px);
 }
 
 .talk-ab-me{
     width: clamp(350px, 3vw, 420px);
-    padding: clamp(40px, 90%, 0);
 }
 
 .hello{
@@ -145,10 +144,11 @@ a{
 
 .des{
     font-family: "Poppins";
-    font-size: clamp(17px, 3vw, 22px);
+    font-size: clamp(19px, 3vw, 22px);
     color: #BBB;
     font-weight: 400;
     letter-spacing: -0.8px;
+    line-height: -5px;
 }
 
 .resume{
