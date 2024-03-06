@@ -142,7 +142,7 @@ a{
     font-size: clamp(10px, 2vw, 12px);
     color: #BBB;
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .signup-form{
@@ -159,7 +159,7 @@ a{
     align-items: center;
     border: 1px solid #BBB;
     border-radius: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .google-text{
@@ -176,6 +176,11 @@ a{
     align-items: center;
     height: clamp(40px, 8vw, 50px); 
     margin-bottom: clamp(20px, 4vw, 30px);
+}
+
+input{
+    color: #BBB;
+    padding: 0 9px;
 }
 
 .names input{
@@ -205,11 +210,9 @@ input:focus{
     outline: none;
 }
 
-
 .email-input, .password-input{
     margin-bottom: clamp(20px, 4vw, 30px); 
     margin-top: clamp(10px, 2vw, 20px); 
-    width: 100%;
     height: clamp(40px, 8vw, 50px);
     border: 1px solid #BBB;
     border-radius: 8px;
@@ -225,7 +228,7 @@ input:focus{
 
 .signup-btn{
     margin-bottom: clamp(6px, 1vw, 10px);
-    margin-top: clamp(20px, 4vw, 30px);
+    margin-top: clamp(5px, 3vw, 20px);
     width: 100%;
     height: clamp(40px, 8vw, 50px);
     border: none;
