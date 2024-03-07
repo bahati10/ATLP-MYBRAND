@@ -176,6 +176,11 @@ textarea:focus, input:focus{
     margin-bottom: clamp(20px, 4vw, 30px);
 }
 
+input, textarea{
+    color: #BBB;
+    padding: 0 9px;
+}
+
 .names input{
     width: clamp(120px, 30vw, 200px);
     height: clamp(40px, 8vw, 50px);
@@ -183,10 +188,6 @@ textarea:focus, input:focus{
     border-radius: 8px;
     background: transparent;
     margin-bottom: clamp(20px, 5vw, 30px);
-}
-
-input{
-    color: #BBB;
 }
 
 .names label{
@@ -231,6 +232,10 @@ textarea{
     margin-top: 12px;
     margin-bottom: 22px;
     color: #BBB;
+    font-size: clamp(8px, 2vw, 12px);
+    color: #BBB;
+    font-weight: 400;
+    padding-top: 10px;
 }
 
 .send-btn{

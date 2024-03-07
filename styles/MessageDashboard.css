@@ -194,6 +194,18 @@ tr .action {
     color: #E87B7B;
 }
 
+.no-message{
+    display: none;
+    justify-content: center;
+    font-family: "Poppins";
+    font-size: clamp(17px, 3vw, 22px);
+    color: #918F8F;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
 
 /* FOOTER */
 
