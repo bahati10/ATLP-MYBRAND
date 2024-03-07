@@ -131,6 +131,7 @@ textarea:focus, input:focus{
     font-size: clamp(10px, 2vw, 12px);
     color: #FFF;
     font-weight: 400;
+    width: 97%;
 }
 
 .subtitle{
@@ -138,6 +139,7 @@ textarea:focus, input:focus{
     font-size: clamp(10px, 2vw, 12px);
     color: #BBB;
     font-weight: 300;
+    width: 97%;
 }
 
 .or{
@@ -153,10 +155,10 @@ textarea:focus, input:focus{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 97%;
 }
 
 .icon-holder{
-    width: 100%;
     height: clamp(40px, 8vw, 50px);
     display: flex;
     justify-content: space-around;
@@ -182,12 +184,12 @@ input, textarea{
 }
 
 .names input{
-    width: clamp(120px, 30vw, 200px);
+    width: clamp(100px, 23vw, 150px); 
     height: clamp(40px, 8vw, 50px);
     border: 1px solid #BBB;
     border-radius: 8px;
     background: transparent;
-    margin-bottom: clamp(20px, 5vw, 30px);
+    margin-bottom: clamp(15px, 3vw, 25px);
 }
 
 .names label{
@@ -198,12 +200,10 @@ input, textarea{
     font-weight: 400;
 }
 
-
 .first-name-det, .last-name-det{
     display: flex;
     flex-direction: column;
 }
-
 
 .email-input, .message-input{
     margin-bottom: clamp(20px, 4vw, 30px); 
