@@ -46,18 +46,18 @@
                         <div class="names">
                             <div class="first-name-det">
                                 <label for="first-name" class="first-name-label">First Name</label>
-                                <input type="text" class="first-name-input">
+                                <input type="text" class="first-name-input" onkeyup="validateFirstName()">
                             </div>
                             <div class="last-name-det">
                                 <label for="Last Name" class="last-name-label">Last Name</label>
-                                <input type="text" class="last-name-input">
+                                <input type="text" class="last-name-input" onkeyup="validateLastName()">
                             </div>
                         </div>
                         <div class="input-labels"></div>
                         <label for="Email" class="email-label">Email</label>
-                        <input type="text" class="email-input">
+                        <input type="text" class="email-input" onkeyup="validateEmail()">
                         <label for="Message" class="message-label">Message</label>
-                        <textarea name="Message" id="message-text" cols="3" rows="10"></textarea>
+                        <textarea name="Message" id="message-text" cols="3" rows="10" onkeyup="validateMessage()"></textarea>
                         <button class="send-btn">Send</button>
                     </form>
                 </h5>
@@ -67,5 +67,6 @@
             Made with 🇷🇼 pride by Bahati Yves
         </footer>
     </div>
+    <script src="/js/send.messages.js" defer></script>
 </body>
 </html>
