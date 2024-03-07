@@ -229,6 +229,15 @@ input:focus{
     letter-spacing: -0.3px;
 }
 
+.submit-error{
+    color: #E87B7B;
+    font-family: "Poppins";
+    font-weight: 400;
+    letter-spacing: -0.7px;
+    text-align: center;
+    font-size: clamp(8px, 2vw, 12px);
+}
+
 .registered{
     margin-top: clamp(20px, 4vw, 30px);
     font-family: "Poppins";
