@@ -196,7 +196,7 @@ input{
 }
 
 .names input{
-    width: clamp(120px, 25vw, 180px); 
+    width: clamp(100px, 23vw, 150px); 
     height: clamp(40px, 8vw, 50px);
     border: 1px solid #BBB;
     border-radius: 8px;
@@ -224,7 +224,7 @@ input:focus{
 
 .email-input, .password-input{
     margin-bottom: clamp(20px, 4vw, 30px); 
-    margin-top: clamp(10px, 2vw, 20px); 
+    margin-top: clamp(5px, 3vw, 10px); 
     height: clamp(40px, 8vw, 50px);
     border: 1px solid #BBB;
     border-radius: 8px;
