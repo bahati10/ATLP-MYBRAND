@@ -78,6 +78,9 @@ function validateForm() {
     if (!validateFirstName() || !validateLastName() || !validateEmail() || !validateMessage()) {
         submitError.innerHTML = "PLease fix above errors";
     } else {
+        submitError.style.display = "flex"
+        submitError.style.color = "#6eeb83";
+        submitError.innerHTML = "Message Sent!";
         setData();
     }
 }

@@ -132,6 +132,7 @@ textarea:focus, input:focus{
     font-size: clamp(16px, 4vw, 20px); 
     color: #FFF;
     font-weight: 400;
+    width: 97%;
 }
 
 .top-subtitle{
@@ -139,12 +140,14 @@ textarea:focus, input:focus{
     font-size: clamp(11px, 2vw, 12px);
     color: #BBB;
     font-weight: 300;
+    width: 97%;
 }
 
 .add-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 97%;
 }
 
 .title-input{
