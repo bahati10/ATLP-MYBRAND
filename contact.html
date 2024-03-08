@@ -46,18 +46,19 @@
                         <div class="names">
                             <div class="first-name-det">
                                 <label for="first-name" class="first-name-label">First Name</label>
-                                <input type="text" class="first-name-input" onkeyup="validateFirstName()">
+                                <input type="text" class="first-name-input" id="first-name" onkeyup="validateFirstName()" autocomplete="none">
                             </div>
                             <div class="last-name-det">
-                                <label for="Last Name" class="last-name-label">Last Name</label>
-                                <input type="text" class="last-name-input" onkeyup="validateLastName()">
+                                <label for="last-Name" class="last-name-label">Last Name</label>
+                                <input type="text" class="last-name-input" id="last-Name" onkeyup="validateLastName()" autocomplete="none">
                             </div>
                         </div>
                         <div class="input-labels"></div>
-                        <label for="Email" class="email-label">Email</label>
-                        <input type="text" class="email-input" onkeyup="validateEmail()">
-                        <label for="Message" class="message-label">Message</label>
+                        <label for="email" class="email-label">Email</label>
+                        <input type="text" class="email-input" id="email" onkeyup="validateEmail()" autocomplete="none">
+                        <label for="message-text" class="message-label">Message</label>
                         <textarea name="Message" id="message-text" cols="3" rows="10" onkeyup="validateMessage()"></textarea>
+                        <span class="submit-error"></span>
                         <button class="send-btn">Send</button>
                     </form>
                 </h5>
