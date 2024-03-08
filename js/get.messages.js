@@ -29,7 +29,7 @@ function populateMessage() {
         row.appendChild(nameCell);
 
         const emailCell = document.createElement("td");
-        emailCell.textContent = message.email;
+        emailCell.textContent = message.message;
         row.appendChild(emailCell);
 
         const actionCell = document.createElement("td");

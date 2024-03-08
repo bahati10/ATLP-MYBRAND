@@ -184,8 +184,9 @@ input, textarea{
 }
 
 .names input{
-    width: clamp(100px, 23vw, 150px); 
+    width: clamp(100px, 23vw, 170px); 
     height: clamp(40px, 8vw, 50px);
+    font-size: clamp(12px, 2vw, 14px);
     border: 1px solid #BBB;
     border-radius: 8px;
     background: transparent;
@@ -212,11 +213,13 @@ input, textarea{
     border: 1px solid #BBB;
     border-radius: 8px;
     background: transparent;
+    font-family: "Poppins";
+    font-size: clamp(12px, 2vw, 14px);
 }
 
 .email-label, .message-label{
     font-family: "Poppins";
-    font-size: clamp(8px, 2vw, 12px);
+    font-size: clamp(11px, 2vw, 12px);
     color: #BBB;
     font-weight: 400;
 }
@@ -232,10 +235,20 @@ textarea{
     margin-top: 12px;
     margin-bottom: 22px;
     color: #BBB;
-    font-size: clamp(8px, 2vw, 12px);
+    font-family: "Poppins";
+    font-size: clamp(12px, 2vw, 14px);
     color: #BBB;
     font-weight: 400;
     padding-top: 10px;
+}
+
+.submit-error{
+    color: #74c69d;
+    font-family: "Poppins";
+    font-weight: 400;
+    letter-spacing: -0.4px;
+    text-align: center;
+    font-size: clamp(8px, 2vw, 12px);
 }
 
 .send-btn{
