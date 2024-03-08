@@ -15,6 +15,7 @@ a{
 
 textarea:focus, input:focus{
     outline: none;
+    color: #BBB;
 }
 
 .container{
@@ -124,7 +125,6 @@ textarea:focus, input:focus{
 .talk-ab-me{
     height: 100%;
     padding: clamp(5px, 4vw, 60px);
-
 }
 
 .top-title{
@@ -150,22 +150,14 @@ textarea:focus, input:focus{
     width: 97%;
 }
 
-.title-input{
-    margin-bottom: 15px;
-    margin-top: 5px;
-    width: 99%;
-    height: clamp(40px, 8vw, 50px);
-    border: 1px solid #BBB;
-    border-radius: 8px;
-    background: transparent;
+input{
     color: #BBB;
-
+    padding: 0 9px;
 }
 
-.subtitle-input{
+.title-input, .subtitle-input, .image-input{
     margin-bottom: 15px;
     margin-top: 5px;
-    width: 99%;
     height: clamp(40px, 8vw, 50px);
     border: 1px solid #BBB;
     border-radius: 8px;
@@ -173,19 +165,11 @@ textarea:focus, input:focus{
     color: #BBB;
 }
 
-.title-label, .subtitle-label, .content-label{
+.image-label, .title-label, .subtitle-label, .content-label{
     font-family: "Poppins";
     font-size: clamp(10px, 2vw, 12px);
     color: #BBB;
     font-weight: 400;
-}
-
-.forgot-p{
-    font-family: "Poppins";
-    font-size: 10px;
-    font-weight: 400;
-    color: #BBB;
-    text-align: end;
 }
 
 .add-btn{
@@ -203,11 +187,20 @@ textarea:focus, input:focus{
     letter-spacing: -0.3px;
 }
 
-.blog-image-input, .content-input{
+.submit-error{
+    color: #E87B7B;
+    font-family: "Poppins";
+    font-weight: 400;
+    letter-spacing: -0.7px;
+    text-align: center;
+    font-size: clamp(8px, 2vw, 12px);
+}
+
+.content-input{
     margin-bottom: 15px;
     margin-top: 5px;
-    width: 350px;
     height: 50px;
+    font-size: clamp(12px, 2vw, 14px);
     border: 1px solid #BBB;
     border-radius: 8px;
     background: transparent;
@@ -215,25 +208,29 @@ textarea:focus, input:focus{
 
 .blog-image-label, .content-label{
     font-family: "Poppins";
-    font-size: 12px;
+    font-size: clamp(10px, 2vw, 12px);
     color: #BBB;
     font-weight: 400;
 }
 
 .content-input{
-    width: 99%;
     margin-top: clamp(5px, 3vw, 10px); 
-    width: 99%;
     height:  clamp(100px, 8vw, 140px);
     background: transparent;
     border: 1px solid #BBB;
     border-radius: 8px;
 }
 
-#content-text{
+.content-input{
+    font-family: "Poppins";
+    font-size: clamp(12px, 2vw, 14px);
     margin-top: 12px;
     margin-bottom: 22px;
     color: #BBB;
+}
+
+textarea{
+    padding: 9px;
 }
 
 
