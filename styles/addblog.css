@@ -155,18 +155,7 @@ input{
     padding: 0 9px;
 }
 
-.title-input{
-    margin-bottom: 15px;
-    margin-top: 5px;
-    height: clamp(40px, 8vw, 50px);
-    border: 1px solid #BBB;
-    border-radius: 8px;
-    background: transparent;
-    color: #BBB;
-
-}
-
-.subtitle-input{
+.title-input, .subtitle-input, .image-input{
     margin-bottom: 15px;
     margin-top: 5px;
     height: clamp(40px, 8vw, 50px);
@@ -176,7 +165,7 @@ input{
     color: #BBB;
 }
 
-.title-label, .subtitle-label, .content-label{
+.image-label, .title-label, .subtitle-label, .content-label{
     font-family: "Poppins";
     font-size: clamp(10px, 2vw, 12px);
     color: #BBB;
@@ -198,7 +187,16 @@ input{
     letter-spacing: -0.3px;
 }
 
-.blog-image-input, .content-input{
+.submit-error{
+    color: #E87B7B;
+    font-family: "Poppins";
+    font-weight: 400;
+    letter-spacing: -0.7px;
+    text-align: center;
+    font-size: clamp(8px, 2vw, 12px);
+}
+
+.content-input{
     margin-bottom: 15px;
     margin-top: 5px;
     height: 50px;
@@ -223,7 +221,7 @@ input{
     border-radius: 8px;
 }
 
-#content-text{
+.content-input{
     font-family: "Poppins";
     font-size: clamp(12px, 2vw, 14px);
     margin-top: 12px;

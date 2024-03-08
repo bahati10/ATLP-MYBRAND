@@ -67,7 +67,7 @@ a{
     font-family: "Poppins";
 }
 
-ul .first a{
+ul .third a{
     color: #918F8F;
 }
 
@@ -147,7 +147,7 @@ table caption{
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
 }
 
-.table-heads{
+th{
     color: #DDD;
     font-family: "Poppins";
     font-weight: 600;
@@ -172,17 +172,19 @@ td{
     font-weight: 400;
 }
 
-tr .names {
-    max-width: clamp(200px, 30%, 300px);
-}
 tr .number {
     max-width: clamp(70px, 10%, 90px);
     text-align: center;
 }
-tr .email {
+tr .author {
     max-width: clamp(200px, 30%, 300px);
 }
-tr .action {
+tr .title {
+    max-width: clamp(120px, 20%, 160px);
+    word-wrap: break-word;
+}
+
+tr .date {
     max-width: clamp(120px, 20%, 160px);
 }
 
@@ -194,6 +196,18 @@ tr .action {
 .action{
     border: 1px solid #292929;
     color: #E87B7B;
+}
+
+.no-article{
+    display: none;
+    justify-content: center;
+    font-family: "Poppins";
+    font-size: clamp(16px, 2vw, 20px);
+    color: #918F8F;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 
