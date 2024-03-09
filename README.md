@@ -56,4 +56,4 @@ blog, Admin dashboard, and other important pages that will be used in this proje
 
 
 The visitors will be able to sign up and log into the system and add  articles. Users can also  
-interact with the article by liking or commenting on it.
+interact with the articles by liking or commenting on them.
