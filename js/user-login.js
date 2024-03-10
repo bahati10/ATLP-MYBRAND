@@ -20,7 +20,8 @@ if (!localStorage.getItem("adminData")) {
     localStorage.setItem("adminData", JSON.stringify(adminData));
 }
 
-function validateEmail(email) {
+function validateEmail() {
+    const email = document.querySelector(".email-input").value;
     if (email.length === 0) {
         emailLabel.style.color = "#E87B7B";
         emailLabel.innerHTML = 'Email required';
@@ -46,11 +47,12 @@ function validateLoginForm() {
     } else if (!validatePassword(password)) {
         submitError.innerHTML = "Incorrect Password";
     } else {
-        adminLogin(email, password); // Pass email and password to adminLogin
+        adminLogin(email, password);
     }
 }
 
-function validatePassword(password) {
+function validatePassword() {
+    const password = document.querySelector(".password-input").value;
     if (password.length < 1) {
         passwordLabel.style.color = "#E87B7B";
         passwordLabel.innerHTML = 'Password required';
@@ -100,7 +102,7 @@ function adminLogin(email, password) {
         console.log(`Admin with email ${email} and password ${password} found`);
         adminNext();
     } else {
-        compare(email, password); // Pass email and password to compare
+        compare(email, password);
     }
 } 
 
