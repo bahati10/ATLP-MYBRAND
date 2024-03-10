@@ -20,7 +20,7 @@ function validateFirstName() {
     } 
     
     if (!firstName.match(/^[A-Za-z]+$/)) {
-        passwordLabel.style.color = "#E87B7B"
+        firstNameLabel.style.color = "#E87B7B"
         firstNameLabel.innerHTML = 'Name should have letters only';
         return false;
     } 
@@ -37,7 +37,7 @@ function validateLastName() {
     } 
     
     if (!lastName.match(/^[A-Za-z]+$/)) {
-        passwordLabel.style.color = "#E87B7B"
+        lastNameLabel.style.color = "#E87B7B"
         lastNameLabel.innerHTML = 'Name should have letters only';
         return false;
     } 
@@ -89,6 +89,7 @@ const setData = () => {
 
     let messageData = JSON.parse(localStorage.getItem("messageData")) || [];
     let newMessage = {
+        id: generateId(),
         firstName: document.querySelector(".first-name-input").value,
         lastName: document.querySelector(".last-name-input").value,
         email: document.querySelector(".email-input").value,
@@ -99,6 +100,16 @@ const setData = () => {
 
     resetForm();
 };
+
+const generateId = () => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let id = '';
+    for (let i = 0; i < 8; i++) {
+        id += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return id;
+};
+
 
 let resetForm = () => {
     const firstNameInput = document.querySelector(".first-name-input");
