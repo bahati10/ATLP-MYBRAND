@@ -97,6 +97,7 @@ const setData = () => {
 
     let blogData = JSON.parse(localStorage.getItem("blogData")) || [];
     let newBlog = {
+        id: generateId(),
         image: document.querySelector(".image-input").value,
         title: document.querySelector(".title-input").value,
         subtitle: document.querySelector(".subtitle-input").value,
@@ -107,6 +108,16 @@ const setData = () => {
     localStorage.setItem("blogData", JSON.stringify(blogData));
     next();
 };
+
+const generateId = () => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let id = '';
+    for (let i = 0; i < 8; i++) {
+        id += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return id;
+};
+
 
 function formatTimestamp(date) {
     const options = { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' };

@@ -106,7 +106,7 @@ const setData = () => {
 
     let userData = JSON.parse(localStorage.getItem("userData")) || [];
     let newUser = {
-        id: generateRandomId(),
+        id: generateId(),
         firstName: document.querySelector(".first-name-input").value,
         lastName: document.querySelector(".last-name-input").value,
         email: document.querySelector(".email-input").value,
@@ -120,7 +120,7 @@ const setData = () => {
 };
 
 
-const generateRandomId = () => {
+const generateId = () => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let id = '';
     for (let i = 0; i < 8; i++) {
