@@ -141,4 +141,3 @@ let resetForm = () => {
     // Reset submit error message
     submitError.innerHTML = "";
 };
-
