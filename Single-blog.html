@@ -55,78 +55,9 @@
                 <div class="title">What is Lorem Ipsum?</div>
                 <div class="content">
                     <div class="main-content">
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable
-                        content of a page when looking at its layout. The point of using Lorem Ipsum 
-                        is that it has a more-or-less normal distribution of letters, as opposed to using 
-                        'Content here, content here', making it look like
-                        readable English. Many desktop publishing packages and web page editors now use Lorem
-                        Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many 
-                        web sites still in their infancy. Various versions have evolved over the years, 
-                        sometimes by accident, sometimes on purpose injected humour and the 
-                        What is Lorem Ipsum subtitle?Where does it come from? <br><br>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in 
-                        a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-                        Richard McClintock, a Latin professor at Hampden-
-                        Sydney College in Virginia, looked up one of the more obscure Latin words,
-                        consectetur, from a Lorem Ipsum passage, and going through the cites of the word
-                        in classical literature, discovered the undoubtable source. Lorem Ipsum comes
-                        from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
-                        <br><br>
-                        (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on 
-                        the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-                        "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. reproduced in their
-                         exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-                         <div class="subtitle">It is a long established fact that a reader will be distracted by the readable</div>
-
-                         Why do we use it?
-                         It is a long established fact that a reader will be distracted by the readable
-                         content of a page when looking at its layout. The point of using Lorem Ipsum 
-                         is that it has a more-or-less normal distribution of letters, as opposed to using 
-                         'Content here, content here', making it look like \
-                         readable English. Many desktop publishing packages and web page editors now use Lorem
-                         Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many 
-                         web sites still in their infancy. Various versions have evolved over the years, 
-                         <br><br>
-                         sometimes by accident, sometimes on purpose injected humour and the 
-                         What is Lorem Ipsum subtitle?Where does it come from?
-                         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in 
-                         a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-                         Richard McClintock, a Latin professor at Hampden-
-                         Sydney College in Virginia, looked up one of the more obscure Latin words,
-                         consectetur, from a Lorem Ipsum passage, and going through the cites of the word
-                         <br><br>
-                         in classical literature, discovered the undoubtable source. Lorem Ipsum comes
-                         from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
-                         (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on 
-                         the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-                         "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. reproduced in their
-                          exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                          Why do we use it?
-                          <br><br><br>
-                          It is a long established fact that a reader will be distracted by the readable
-                          content of a page when looking at its layout. The point of using Lorem Ipsum 
-                          is that it has a more-or-less normal distribution of letters, as opposed to using 
-                          'Content here, content here', making it look like \
-                          readable English. Many desktop publishing packages and web page editors now use Lorem
-                          Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many 
-                          web sites still in their infancy. Various versions have evolved over the years, 
-                          sometimes by accident, sometimes on purpose injected humour and the 
-                          <br><br>
-                          What is Lorem Ipsum subtitle?Where does it come from?
-                          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in 
-                          a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-                          Richard McClintock, a Latin professor at Hampden-
-                          Sydney College in Virginia, looked up one of the more obscure Latin words,
-                          consectetur, from a Lorem Ipsum passage, and going through the cites of the word
-                          in classical literature, discovered the undoubtable source. Lorem Ipsum comes
-                          <br><br>
-                          from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" 
-                          (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on 
-                          the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-                          "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. reproduced in their
-                           exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        <div class="subtitle">Subtitle here</div>
+                        <div class="main-content">
+                        </div>
                     </div>
                 </div>
                 <div class="buttons">
@@ -134,16 +65,19 @@
                     <button class="delete">Delete</button>
                 </div>
                 <div class="comment-section">
-                    <div class="comments-title">Comments( 1 )</div>
-                    <div class="comment-box">
-                        <div class="owner">Bahati Yves</div>
-                        <div class="date-created">Apr 22 2024</div>
-                        <div class="comment">comes from a line in section 1.10.32. reproduced in their
-                            exact original form, accompanied by English versions from the 1914 
-                        </div>
+                    <div class="comments-title">Comments( 0 )</div>
+                    <div class="comment-container">
+                        <!-- <div class="comment-box">
+                            <div class="owner">Bahati Yves</div>
+                            <div class="date-created">Apr 22 2024</div>
+                            <div class="comment-text">comes from a line in section 1.10.32. reproduced in their
+                                exact original form, accompanied by English versions from the 1914 
+                            </div>
+                        </div> -->
                     </div>
                     <div class="add-comment">
-                        <input type="text" class="comment-input" placeholder="Add a comment">
+                        <label for="comment" class="comment-label">Add a comment</label>
+                        <input type="text" class="comment-input" id="comment" placeholder="Add a comment" onkeyup="validateComment()">
                         <div class="post-button-container">
                             <button class="post">Post</button>
                         </div>
@@ -156,5 +90,6 @@
         </footer>
     </div>
     <script src="/js/confirmdelete.js" defer></script>
+    <script src="/js/single-blog-view.js" defer></script>
 </body>
 </html>

@@ -12,7 +12,7 @@ function createBlogHTML(blog) {
         <div class="blog-image">
             <img src="${blog.image}" alt="Blog Image" class="blog-photo">
         </div>
-        <a href="/Single-blog.html">
+        <a href="/Single-blog.html?id=${blog.id}">
             <div class="content">
                <div class="title">${blog.title}</div>
                 <div class="date">${blog.author} - ${blog.timestamp}</div>

@@ -102,6 +102,7 @@ const setData = () => {
         title: document.querySelector(".title-input").value,
         subtitle: document.querySelector(".subtitle-input").value,
         content: document.querySelector(".content-input").value,
+        comments: [],
         timestamp: formatTimestamp(new Date()) 
     };
     blogData.push(newBlog);
