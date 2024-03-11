@@ -249,6 +249,10 @@ a{
 }
 
 .main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: "Poppins";
     font-size: clamp(14px, 1.5vw, 18px);
     color: #BBB;
@@ -261,6 +265,7 @@ a{
     font-size: clamp(16px, 2vw, 20px);
     font-weight: 600;
     margin: 40px 0;
+    margin-bottom: 20px;
     color: #DDD;
     text-align: center;
     padding: 0 40px;
@@ -314,6 +319,7 @@ a{
     padding: 10px;
     border: 1px solid #BBB;
     border-radius: 6px;
+    margin-bottom: 10px;
 }
 
 .comment-box .owner{
@@ -328,7 +334,7 @@ a{
     color: #BBB;
 }
 
-.comment-box .comment{
+.comment-box .comment-text{
     font-family: "Poppins";
     font-size: 12px;
     color: #BBB;
