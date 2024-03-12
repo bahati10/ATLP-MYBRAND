@@ -83,7 +83,7 @@ ul .first a{
 }
 
 
-.contact{
+.logout{
     width: clamp(120px, 7vw, 150px);
     height: clamp(40px, 5vw, 60px); 
     display: flex;
@@ -92,7 +92,7 @@ ul .first a{
     background: #080E11;
 }
 
-.contact button{
+.logout button{
     display: flex;
     flex-direction: row;
     justify-content: center;

@@ -11,10 +11,12 @@ form.addEventListener("submit", (e) => {
 if (!localStorage.getItem("adminData")) {
     const AdminEmail = "admin@gmail.com";
     const AdminPassword = "admin123";
+    const AdminNames = "Bahati";
 
     let adminData = [{
         email: AdminEmail,
-        password: AdminPassword
+        password: AdminPassword,
+        names: AdminNames
     }];
 
     localStorage.setItem("adminData", JSON.stringify(adminData));
@@ -68,6 +70,7 @@ function validatePassword() {
     return true;
 }
 
+
 function compare(email, password) {
     let userData = JSON.parse(localStorage.getItem("userData"));
     let submitError = document.querySelector(".submit-error");
@@ -77,13 +80,19 @@ function compare(email, password) {
     });
 
     if (found) {
+        sessionStorage.setItem('isLoggedIn', true);
+        sessionStorage.setItem('userEmail', email);
+        sessionStorage.setItem('adminNames', found.names);
+
         submitError.innerHTML = '✅';
         setTimeout(function () { submitError.style.display = "none" }, 1500);
         console.log(`User with email ${email} and password ${password} found`);
         next();
     } else {
+        const addblog = document.querySelector(".addblog")
+        addblog.style.display= "none";
         submitError.innerHTML = 'Check email or password and Try again!';
-        submitError.style.color ="#bbb";
+        submitError.style.color = "#bbb";
         resetForm();
     }
 }
@@ -97,6 +106,9 @@ function adminLogin(email, password) {
     });
 
     if (found) {
+        sessionStorage.setItem('isLoggedIn', true);
+        sessionStorage.setItem('userEmail', email);
+
         submitError.innerHTML = '✅';
         setTimeout(function () { submitError.style.display = "none" }, 1500);
         console.log(`Admin with email ${email} and password ${password} found`);
@@ -104,7 +116,38 @@ function adminLogin(email, password) {
     } else {
         compare(email, password);
     }
-} 
+}
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     console.log('DOM content loaded.');
+//     if (window.location.pathname === "users.html") {
+//         checkAuth();
+//     }
+// });
+
+
+// function checkAuth() {
+//     const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+//     const userEmail = sessionStorage.getItem('userEmail');
+    
+//     const expectedUserEmail = 'admin@gmail.com';
+
+//     console.log('isLoggedIn:', isLoggedIn);
+//     console.log('userEmail:', userEmail);
+
+//     if (!isLoggedIn && userEmail !== expectedUserEmail) {
+//         console.log('Unauthorized access detected. Redirecting to login page.');
+//         window.location.href = "login.html";
+//     }
+// }
+
+
+// const addBlogButton = document.querySelector('.add-blog-btn');
+// if (!isLoggedIn || !userEmail) {
+//     addBlogButton.style.display = 'none';
+// } else {
+//     addBlogButton.style.display = 'block';
+// }
 
 function next() {
     window.setTimeout(function () {

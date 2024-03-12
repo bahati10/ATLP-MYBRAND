@@ -65,7 +65,7 @@
                     <button class="delete">Delete</button>
                 </div>
                 <div class="comment-section">
-                    <div class="comments-title">Comments( 1 )</div>
+                    <div class="comments-title">Comments( 0 )</div>
                     <div class="comment-container">
                         <!-- <div class="comment-box">
                             <div class="owner">Bahati Yves</div>
@@ -76,7 +76,8 @@
                         </div> -->
                     </div>
                     <div class="add-comment">
-                        <input type="text" class="comment-input" placeholder="Add a comment">
+                        <label for="comment" class="comment-label">Add a comment</label>
+                        <input type="text" class="comment-input" id="comment" placeholder="Add a comment" onkeyup="validateComment()">
                         <div class="post-button-container">
                             <button class="post">Post</button>
                         </div>

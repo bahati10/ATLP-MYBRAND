@@ -47,7 +47,7 @@ function validateSubtitle() {
     const subtitle = document.querySelector(".subtitle-input").value
     if (subtitle.length < 1) {
         subtitleLabel.style.color = "#E87B7B"
-        subtitleLabel.innerHTML = "Subitle can't be Empty";
+        subtitleLabel.innerHTML = "Subtitle can't be Empty";
         return false;
     } 
 
@@ -86,18 +86,45 @@ function validateForm() {
         submitError.style.display = "flex"
         submitError.style.color = "#6eeb83";
         submitError.innerHTML = "Blog Added!";
-        setData();
-        addBlogsToHTML();
+        checkAuth()
         resetForm();
     }
 }
+
+function checkAuth() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    const userEmail = sessionStorage.getItem('userEmail');
+
+    const expectedUserEmail = 'admin@gmail.com';    
+
+    console.log('isLoggedIn:', isLoggedIn);
+    console.log('userEmail:', userEmail);
+
+    if (!isLoggedIn && userEmail !== expectedUserEmail ) {
+        console.log('Unauthorized access detected. Redirecting to login page.');
+        window.location.href = "login.html";
+    } else{
+        setData();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM content loaded.');
+    if (window.location.pathname === '/users.html') {
+        console.log('Checking authentication for specific route.');
+        checkAuth();
+    }
+});
 
 
 const setData = () => {
 
     let blogData = JSON.parse(localStorage.getItem("blogData")) || [];
+    let adminData = JSON.parse(localStorage.getItem("adminData")) || [];
+
     let newBlog = {
         id: generateId(),
+        author: adminData.name,
         image: document.querySelector(".image-input").value,
         title: document.querySelector(".title-input").value,
         subtitle: document.querySelector(".subtitle-input").value,

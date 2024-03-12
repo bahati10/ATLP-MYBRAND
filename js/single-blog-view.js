@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     displaySingleBlog();
 });
 
+let commentLabel = document.querySelector(".comment-label");
+
 function displaySingleBlog() {
     const urlParams = new URLSearchParams(window.location.search);
     const blogId = urlParams.get('id');
@@ -34,6 +36,36 @@ function displaySingleBlog() {
 }
 
 
+function validateComment() {
+    const input = document.querySelector(".comment-input").value;
+    if (input.length < 1) {
+        commentLabel.style.color = "#E87B7B"
+        commentLabel.innerHTML = "Comment can't be Empty";
+        return false;
+    } 
+        commentLabel.innerHTML = '✅';
+        return true;
+    }
+
+
+function validateForm() {
+    if (!validateComment()) {
+        commentLabel.innerHTML = "PLease fix this errors";
+    } else {
+        commentLabel.style.display = "flex"
+        commentLabel.style.color = "#6eeb83";
+        commentLabel.innerHTML = "Blog Added!";
+        postComment();
+        resetForm();
+    }
+}
+
+function resetForm() {
+    commentLabel.innerHTML= ""
+    commentLabel.style.color= ""
+}    
+
+
 function displayComments(comments) {
     const commentContainer = document.querySelector(".comment-container");
     commentContainer.innerHTML = "";
@@ -53,8 +85,10 @@ function displayComments(comments) {
 }
 
 function postComment() {
+    const commentLabel = document.querySelector(".comment-label").value;
     const input = document.querySelector(".comment-input");
     const commentText = input.value.trim();
+
     if (commentText !== "") {
         const owner = "Name";
         const date = formatTimestamp(new Date());
@@ -71,7 +105,7 @@ function postComment() {
 
             const commentCount = blog.comments.length;
             const commentTitle = document.querySelector(".comments-title");
-            commentTitle.textContent = `Comments (${commentCount})`;
+            commentTitle.textContent = `Comments ( ${commentCount} )`;
 
             displayComments(blog.comments);
         } else {
@@ -82,6 +116,45 @@ function postComment() {
     }
 }
 
+const deleteButton = document.querySelector(".delete-model .delete-btn");
+
+deleteButton.addEventListener("click", () => {
+
+    const blogId = new URLSearchParams(window.location.search).get('id');
+    let blogData = JSON.parse(localStorage.getItem("blogData")) || [];
+    blogData = blogData.filter(blog => blog.id !== blogId);
+
+    localStorage.setItem("blogData", JSON.stringify(blogData));
+
+    window.location.href = "blog.html";
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM content loaded.');
+    if (window.location.pathname === "/Single-blog.html") {
+        checkAuth();
+    }
+});
+
+function checkAuth() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    const userEmail = sessionStorage.getItem('userEmail');
+    const actionButtons = document.querySelector(".buttons");
+    const expectedUserEmail = 'admin@gmail.com';
+
+    console.log('isLoggedIn:', isLoggedIn);
+    console.log('userEmail:', userEmail);
+
+    if (!isLoggedIn || userEmail !== expectedUserEmail) {
+        actionButtons.style.display = "none";
+        console.log('Unauthorized access detected. Redirecting to login page.');
+    } else {
+        actionButtons.style.display = "flex";
+    }
+}
+
+
 function generateId() {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let id = '';
@@ -90,11 +163,6 @@ function generateId() {
     }
     return id;
 }
-
-
-
-
-
 
 
 function formatTimestamp(timestamp) {
