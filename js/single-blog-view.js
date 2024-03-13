@@ -58,12 +58,7 @@ function validateForm() {
         postComment();
         resetForm();
     }
-}
-
-function resetForm() {
-    commentLabel.innerHTML= ""
-    commentLabel.style.color= ""
-}    
+} 
 
 
 function displayComments(comments) {
@@ -88,9 +83,15 @@ function postComment() {
     const commentLabel = document.querySelector(".comment-label").value;
     const input = document.querySelector(".comment-input");
     const commentText = input.value.trim();
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+
+    if (!isLoggedIn) {
+        window.location.href = "/login.html";
+        return; // Stop execution here
+    }
 
     if (commentText !== "") {
-        const owner = "Name";
+        const owner = sessionStorage.getItem("Names") || "Author";
         const date = formatTimestamp(new Date());
         const commentId = generateId();
         const newComment = { id: commentId, owner, date, text: commentText };
@@ -106,7 +107,6 @@ function postComment() {
             const commentCount = blog.comments.length;
             const commentTitle = document.querySelector(".comments-title");
             commentTitle.textContent = `Comments ( ${commentCount} )`;
-
             displayComments(blog.comments);
         } else {
             console.error("Blog not found.");
@@ -115,6 +115,13 @@ function postComment() {
         input.value = "";
     }
 }
+
+function resetForm() {
+    commentLabel.innerHTML= ""
+    commentLabel.style.color= ""
+}   
+
+
 
 const deleteButton = document.querySelector(".delete-model .delete-btn");
 
@@ -153,6 +160,13 @@ function checkAuth() {
         actionButtons.style.display = "flex";
     }
 }
+
+const postButton = document.querySelector(".post");
+postButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    postComment();
+});
+
 
 
 function generateId() {

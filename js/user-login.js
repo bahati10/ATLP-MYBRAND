@@ -11,7 +11,6 @@ form.addEventListener("submit", (e) => {
 if (!localStorage.getItem("adminData")) {
     const AdminEmail = "admin@gmail.com";
     const AdminPassword = "admin123";
-    const AdminNames = "Bahati";
 
     let adminData = [{
         email: AdminEmail,
@@ -75,25 +74,26 @@ function compare(email, password) {
     let userData = JSON.parse(localStorage.getItem("userData"));
     let submitError = document.querySelector(".submit-error");
 
-    let found = userData.some(user => {
+    let foundUser = userData.find(user => {
         return user.email === email && user.password === password;
     });
 
-    if (found) {
+    if (foundUser) {
         sessionStorage.setItem('isLoggedIn', true);
         sessionStorage.setItem('userEmail', email);
-        sessionStorage.setItem('adminNames', found.names);
+        sessionStorage.setItem('Names', `${foundUser.firstName} ${ foundUser.lastName}`);
+
 
         submitError.innerHTML = '✅';
         setTimeout(function () { submitError.style.display = "none" }, 1500);
         console.log(`User with email ${email} and password ${password} found`);
         next();
     } else {
-        const addblog = document.querySelector(".addblog")
-        addblog.style.display= "none";
         submitError.innerHTML = 'Check email or password and Try again!';
         submitError.style.color = "#bbb";
         resetForm();
+        const addblog = document.querySelector(".addblog")
+        addblog.style.display= "none";
     }
 }
 
@@ -115,6 +115,27 @@ function adminLogin(email, password) {
         adminNext();
     } else {
         compare(email, password);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM content loaded.');
+    if (window.location.pathname === "/login.html") {
+        loginLoop();
+    }
+});
+
+function loginLoop() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    const userEmail = sessionStorage.getItem('userEmail');
+    
+
+    console.log('isLoggedIn:', isLoggedIn);
+    console.log('userEmail:', userEmail);
+
+    if (isLoggedIn) {
+        console.log('Unauthorized access detected. Redirecting to login page.');
+        window.location.href = "blog.html";
     }
 }
 
