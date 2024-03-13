@@ -79,7 +79,7 @@ a{
 }
 
 
-.login{
+.login-btn{
     width: clamp(120px, 7vw, 150px);
     height: clamp(40px, 5vw, 60px); 
     display: flex;
@@ -88,7 +88,7 @@ a{
     background: #080E11;
 }
 
-.login button{
+.login-btn{
     display: flex;
     flex-direction: row;
     justify-content: center;

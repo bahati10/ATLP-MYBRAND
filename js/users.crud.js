@@ -47,3 +47,16 @@ function deleteUser(index) {
     localStorage.setItem("userData", JSON.stringify(userData));
     populateUsers();
 }
+
+
+const logoutButton = document.querySelector(".logout");
+
+logoutButton.addEventListener('click', function() {
+    logOut();
+})
+
+function logOut() {
+    sessionStorage.removeItem('isLoggedIn')
+    sessionStorage.removeItem('userEmail');
+    window.location.href = "/blog.html";
+}

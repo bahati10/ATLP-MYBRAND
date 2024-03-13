@@ -115,7 +115,7 @@ const setData = () => {
     userData.push(newUser);
     localStorage.setItem("userData", JSON.stringify(userData));
 
-    resetForm();
+    form.reset();
     next();
 };
 

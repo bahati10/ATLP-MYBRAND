@@ -130,6 +130,31 @@ deleteButton.addEventListener("click", () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM content loaded.');
+    if (window.location.pathname === "/Single-blog.html") {
+        checkAuth();
+    }
+});
+
+function checkAuth() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    const userEmail = sessionStorage.getItem('userEmail');
+    const actionButtons = document.querySelector(".buttons");
+    const expectedUserEmail = 'admin@gmail.com';
+
+    console.log('isLoggedIn:', isLoggedIn);
+    console.log('userEmail:', userEmail);
+
+    if (!isLoggedIn || userEmail !== expectedUserEmail) {
+        actionButtons.style.display = "none";
+        console.log('Unauthorized access detected. Redirecting to login page.');
+    } else {
+        actionButtons.style.display = "flex";
+    }
+}
+
+
 function generateId() {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let id = '';
@@ -138,11 +163,6 @@ function generateId() {
     }
     return id;
 }
-
-
-
-
-
 
 
 function formatTimestamp(timestamp) {
