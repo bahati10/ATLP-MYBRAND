@@ -15,7 +15,7 @@ function createBlogHTML(blog) {
         <a href="/Single-blog.html?id=${blog.id}">
             <div class="content">
                <div class="title">${blog.title}</div>
-                <div class="date">${blog.author} - ${blog.timestamp}</div>
+                <div class="date">Bahati - ${blog.timestamp}</div>
                 <div class="des">${blog.subtitle}</div>
             </div>
         </a>
@@ -75,5 +75,6 @@ logoutButton.addEventListener('click', function() {
 function logOut() {
     sessionStorage.removeItem('isLoggedIn')
     sessionStorage.removeItem('userEmail');
+    sessionStorage.removeItem('Names');
     window.location.href = "/blog.html";
 }

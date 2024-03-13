@@ -83,7 +83,7 @@ ul .third a{
 }
 
 
-.contact{
+.logout{
     width: clamp(120px, 7vw, 150px);
     height: clamp(40px, 5vw, 60px); 
     display: flex;
@@ -92,7 +92,7 @@ ul .third a{
     background: #080E11;
 }
 
-.contact button{
+.logout button{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -168,7 +168,7 @@ td{
     height: 40px;
     color: #BBB;
     font-family: "Poppins";
-    font-size: 16px;
+    font-size: clamp(12px, 1.5vw, 16px);
     font-weight: 400;
 }
 
