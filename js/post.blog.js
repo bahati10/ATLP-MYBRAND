@@ -7,7 +7,7 @@ const blogData = JSON.parse(localStorage.getItem("blogData")) || [];
 
 
 function createBlogHTML(blog) {
-    return `fauth
+    return `
     <div class="blog">
         <div class="blog-image">
             <img src="${blog.image}" alt="Blog Image" class="blog-photo">
