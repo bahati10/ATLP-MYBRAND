@@ -50,6 +50,41 @@ function populateMessage() {
 }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM content loaded.');
+    if (window.location.pathname === "/messages.html") {
+        checkAuth();
+    }
+});
+
+
+function checkAuth() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    const userEmail = sessionStorage.getItem('userEmail');
+    
+    const expectedUserEmail = 'admin@gmail.com';
+
+    console.log('isLoggedIn:', isLoggedIn);
+    console.log('userEmail:', userEmail);
+
+    if (!isLoggedIn && userEmail !== expectedUserEmail) {
+        console.log('Unauthorized access detected. Redirecting to login page.');
+        window.location.href = "login.html";
+    }
+}
+
+const logoutButton = document.querySelector(".logout");
+
+logoutButton.addEventListener('click', function() {
+    logOut();
+})
+
+function logOut() {
+    sessionStorage.removeItem('isLoggedIn')
+    sessionStorage.removeItem('userEmail');
+    window.location.href = "/blog.html";
+}
+
 
 function deleteMessage(index) {
     let messageData = JSON.parse(localStorage.getItem("messageData")) || [];

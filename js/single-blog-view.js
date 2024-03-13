@@ -58,12 +58,7 @@ function validateForm() {
         postComment();
         resetForm();
     }
-}
-
-function resetForm() {
-    commentLabel.innerHTML= ""
-    commentLabel.style.color= ""
-}    
+} 
 
 
 function displayComments(comments) {
@@ -88,9 +83,15 @@ function postComment() {
     const commentLabel = document.querySelector(".comment-label").value;
     const input = document.querySelector(".comment-input");
     const commentText = input.value.trim();
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+
+    if (!isLoggedIn) {
+        window.location.href = "/login.html";
+        return; // Stop execution here
+    }
 
     if (commentText !== "") {
-        const owner = "Name";
+        const owner = sessionStorage.getItem("Names") || "Author";
         const date = formatTimestamp(new Date());
         const commentId = generateId();
         const newComment = { id: commentId, owner, date, text: commentText };
@@ -106,7 +107,6 @@ function postComment() {
             const commentCount = blog.comments.length;
             const commentTitle = document.querySelector(".comments-title");
             commentTitle.textContent = `Comments ( ${commentCount} )`;
-
             displayComments(blog.comments);
         } else {
             console.error("Blog not found.");
@@ -115,6 +115,13 @@ function postComment() {
         input.value = "";
     }
 }
+
+function resetForm() {
+    commentLabel.innerHTML= ""
+    commentLabel.style.color= ""
+}   
+
+
 
 const deleteButton = document.querySelector(".delete-model .delete-btn");
 
@@ -130,6 +137,38 @@ deleteButton.addEventListener("click", () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM content loaded.');
+    if (window.location.pathname === "/Single-blog.html") {
+        checkAuth();
+    }
+});
+
+function checkAuth() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    const userEmail = sessionStorage.getItem('userEmail');
+    const actionButtons = document.querySelector(".buttons");
+    const expectedUserEmail = 'admin@gmail.com';
+
+    console.log('isLoggedIn:', isLoggedIn);
+    console.log('userEmail:', userEmail);
+
+    if (!isLoggedIn || userEmail !== expectedUserEmail) {
+        actionButtons.style.display = "none";
+        console.log('Unauthorized access detected. Redirecting to login page.');
+    } else {
+        actionButtons.style.display = "flex";
+    }
+}
+
+const postButton = document.querySelector(".post");
+postButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    postComment();
+});
+
+
+
 function generateId() {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let id = '';
@@ -138,11 +177,6 @@ function generateId() {
     }
     return id;
 }
-
-
-
-
-
 
 
 function formatTimestamp(timestamp) {
