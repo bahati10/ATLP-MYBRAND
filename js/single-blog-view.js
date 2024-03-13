@@ -20,7 +20,7 @@ function displaySingleBlog() {
         imageElement.src = blog.image;
         titleElement.textContent = blog.title;
         subtitleElement.textContent = blog.subtitle;
-        authorElement.textContent = `Authored by ${blog.author} on ${formatTimestamp(blog.timestamp)}`;
+        authorElement.textContent = `Authored by Bahati on ${formatTimestamp(blog.timestamp)}`;
         contentElement.innerHTML = blog.content;
 
         if (blog.comments && Array.isArray(blog.comments)) {
