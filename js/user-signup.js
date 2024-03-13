@@ -119,6 +119,27 @@ const setData = () => {
     next();
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM content loaded.');
+    if (window.location.pathname === "/signup.html") {
+        loginLoop();
+    }
+});
+
+function loginLoop() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    const userEmail = sessionStorage.getItem('userEmail');
+    
+
+    console.log('isLoggedIn:', isLoggedIn);
+    console.log('userEmail:', userEmail);
+
+    if (isLoggedIn) {
+        console.log('Unauthorized access detected. Redirecting to login page.');
+        window.location.href = "blog.html";
+    }
+}
+
 
 const generateId = () => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
