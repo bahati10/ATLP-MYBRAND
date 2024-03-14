@@ -15,7 +15,6 @@ if (!localStorage.getItem("adminData")) {
     let adminData = [{
         email: AdminEmail,
         password: AdminPassword,
-        names: AdminNames
     }];
 
     localStorage.setItem("adminData", JSON.stringify(adminData));

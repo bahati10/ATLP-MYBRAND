@@ -72,7 +72,7 @@ function checkAuth() {
     console.log('isLoggedIn:', isLoggedIn);
     console.log('userEmail:', userEmail);
 
-    if (!userEmail !== expectedUserEmail) {
+    if (!isLoggedIn && userEmail !== expectedUserEmail) {
         console.log('Unauthorized access detected. Redirecting to login page.');
         window.location.href = "login.html";
     }
