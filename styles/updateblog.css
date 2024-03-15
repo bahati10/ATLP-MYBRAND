@@ -143,7 +143,7 @@ textarea:focus, input:focus{
     width: 97%;
 }
 
-.add-form{
+.update-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,14 +176,14 @@ input{
     color: #BBB;
 }
 
-.title-label, .subtitle-label, .content-label{
+.image-label, .title-label, .subtitle-label, .content-label{
     font-family: "Poppins";
     font-size: clamp(10px, 2vw, 12px);
     color: #BBB;
     font-weight: 400;
 }
 
-.add-btn{
+.update-btn{
     margin-bottom: clamp(6px, 1vw, 10px);
     margin-top: clamp(20px, 4vw, 30px);
     width: 100%;
@@ -198,17 +198,18 @@ input{
     letter-spacing: -0.3px;
 }
 
-.blog-image-input, .content-input{
+.image-input, .content-input{
     margin-bottom: 15px;
     margin-top: 5px;
     height: 50px;
+    font-family: "Poppins";
     font-size: clamp(12px, 2vw, 14px);
     border: 1px solid #BBB;
     border-radius: 8px;
     background: transparent;
 }
 
-.blog-image-label, .content-label{
+.image-label, .content-label{
     font-family: "Poppins";
     font-size: clamp(10px, 2vw, 12px);
     color: #BBB;
@@ -221,9 +222,6 @@ input{
     background: transparent;
     border: 1px solid #BBB;
     border-radius: 8px;
-}
-
-#content-text{
     font-family: "Poppins";
     font-size: clamp(12px, 2vw, 14px);
     margin-top: 12px;
