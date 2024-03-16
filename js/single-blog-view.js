@@ -163,6 +163,12 @@ function checkAuth() {
   }
 }
 
+const likeButton = document.getElementById(".like-img");
+
+likeButton("click", function () {
+  likeButton.style.background = "red";
+});
+
 const postButton = document.querySelector(".post");
 postButton.addEventListener("click", function (event) {
   event.preventDefault();
